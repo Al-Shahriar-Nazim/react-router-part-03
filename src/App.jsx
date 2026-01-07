@@ -1,4 +1,5 @@
 import './App.css'
+import FromAction from './components/FromAction/FromAction'
 import SimpleForm from './components/SimpleForm/SimpleForm'
 
 function App() {
@@ -7,7 +8,8 @@ function App() {
   return (
     <>
       <h1>React router</h1>
-      <SimpleForm></SimpleForm>
+      {/* <SimpleForm></SimpleForm> */}
+      <FromAction></FromAction>
     </>
   )
 }
