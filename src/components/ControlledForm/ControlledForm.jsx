@@ -2,14 +2,28 @@ import React, { useState } from "react";
 
 const ControlledForm = () => {
   const [password, setPassword] = useState("");
+  const [error,setError] = useState('');
   const handleSubmit = (e) => {
     e.preventDefault();
     // console.log("Submitted");
-
+if(password.length<6){
+  setError('6 characters required');
+}
+else{
+  setError('');
+  alert('form submitted successfully');
+}
 
   };
   const handlePasswordChange = (e) => {
     console.log(e.target.value);
+    setPassword(e.target.value);
+    // if(password.length<6){
+    //   setError('password must be at least 6 characters');
+    // }
+    // else{
+    //   setError('');
+    // }
   };
   return (
     <div>
@@ -20,7 +34,7 @@ const ControlledForm = () => {
         <input
           type="password"
           name="password"
-          value={password}
+          defaultValue={password}
           onChange={handlePasswordChange}
           placeholder="password"
           required
@@ -29,6 +43,9 @@ const ControlledForm = () => {
         <button type="submit" value="submit">
           Submit
         </button>
+        <p style={{color:"red"}}>
+          <small>{error}</small>
+        </p>
       </form>
     </div>
   );
