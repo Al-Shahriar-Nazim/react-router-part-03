@@ -12,8 +12,8 @@ function App() {
       <h1>React router</h1>
       {/* <SimpleForm></SimpleForm> */}
       {/* <FromAction></FromAction> */}
-      {/* <ControlledForm></ControlledForm> */}
-      <UncontrolledForm></UncontrolledForm>
+      <ControlledForm></ControlledForm>
+      {/* <UncontrolledForm></UncontrolledForm> */}
     </>
   )
 }
